@@ -28,9 +28,6 @@ var _yspawn := -1000
 @onready var _win_timer_object : Timer = $WinTimer
 
 func _ready() -> void:
-	#Input.emulate_touch_from_mouse = true
-	#Input.emulate_mouse_from_touch = false
-	
 	if _wait_time > 5:
 		_win_timer_object.wait_time = _wait_time
 	_win_timer_object.start()
@@ -106,9 +103,6 @@ func _spawn_cone(_ydistance) -> void:
 			_last_spawn_x + _boundary_max
 			)
 			
-		
-		
-		
 	_spawn_pos = Vector2(_spawn_side_options[_spawn_side], _ydistance)
 	_last_spawn_x = _spawn_pos.x
 	
